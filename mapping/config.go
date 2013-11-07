@@ -15,12 +15,12 @@ type Field struct {
 }
 
 type Table struct {
-	Name     string
-	Type     TableType             `json:"type"`
-	Mapping  map[string][]string   `json:"mapping"`
-	Mappings map[string]SubMapping `json:"mappings"`
-	Fields   []*Field              `json:"fields"`
-	Filters  *Filters              `json:"filters"`
+	Name        string
+	Type        TableType             `json:"type"`
+	Mapping     map[string][]string   `json:"mapping"`
+	Mappings    map[string]SubMapping `json:"mappings"`
+	Fields      []*Field              `json:"fields"`
+	Filters     *Filters              `json:"filters"`
 }
 
 type SubMapping struct {
@@ -45,6 +45,7 @@ type GeneralizedTables map[string]*GeneralizedTable
 type Mapping struct {
 	Tables            Tables            `json:"tables"`
 	GeneralizedTables GeneralizedTables `json:"generalized_tables"`
+	KeepAllTags       bool              `json:"keep_all_tags"`
 }
 
 type ElementFilter func(tags *element.Tags) bool

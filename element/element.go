@@ -2,11 +2,15 @@ package element
 
 import (
 	"sort"
-
 	"imposm3/geom/geos"
 )
 
 type Tags map[string]string
+
+type Geometry struct {
+	Geom *geos.Geom
+	Wkb  []byte
+}
 
 type OSMElem struct {
 	Id   int64     `json:"-"`
@@ -24,11 +28,6 @@ type Way struct {
 	OSMElem
 	Refs  []int64 `json:"refs"`
 	Nodes []Node  `json:"nodes,omitempty"`
-}
-
-type Geometry struct {
-	Geom *geos.Geom
-	Wkb  []byte
 }
 
 func (w *Way) IsClosed() bool {
