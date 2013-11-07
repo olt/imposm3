@@ -27,13 +27,11 @@ func init() {
 		"geometry":             {"geometry", "geometry", Geometry, nil},
 		"wayzorder":            {"wayzorder", "int32", WayZOrder, nil},
 		"pseudoarea":           {"pseudoarea", "float32", PseudoArea, nil},
-		"tags_hstore": 			{"tags_hstore", "map", TagsHstore, nil},
+		"tags_hstore":          {"tags_hstore", "map", TagsHstore, nil},
 		"zorder":               {"zorder", "int32", nil, MakeZOrder},
 		"string_suffixreplace": {"string_suffixreplace", "string", nil, MakeSuffixReplace},
 	}
 }
-
-
 
 type MakeValue func(string, *element.OSMElem, Match) interface{}
 
