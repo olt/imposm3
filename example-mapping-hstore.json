@@ -1,0 +1,32 @@
+{
+    "generalized_tables": {
+    },
+    "tables": {
+        "test": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "tags_hstore",
+                    "name": "tags",
+                    "key": null
+                }
+            ],
+            "type": "polygon",
+            "mapping": {
+                "amenity": [
+                    "__any__"
+                ]
+            }
+        }
+    },
+    "keep_all_tags": true
+}
